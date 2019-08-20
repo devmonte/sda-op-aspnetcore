@@ -26,6 +26,27 @@ namespace Empty
                 app.UseDeveloperExceptionPage();
             }
 
+
+            // Added custom middleware
+            //app.Use(async (context, next) =>
+            //{
+
+            //    context.Response.OnStarting(() =>
+            //    {
+            //        context.Response.Headers.Add("MyHeader", "GotItWorking!!!");
+            //        return Task.FromResult(0);
+            //    });
+            //    await next();
+            //});
+
+            //app.Use(async (context, next) =>
+            //{
+
+            //    await context.Response.WriteAsync("Test write middleware!");
+            //    await next();
+            //});
+
+
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
